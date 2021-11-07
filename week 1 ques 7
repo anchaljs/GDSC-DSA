@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int pivotIndex(vector<int>& nums) {
+        int ans=-1;
+        int prevSum=0;
+        int afterSum=0;
+        for(int i=0;i<nums.size();i++){
+            afterSum=0;
+            for(int j=i+1;j<nums.size();j++){
+                afterSum=afterSum+nums[j];
+            }
+            if(afterSum==prevSum){
+                ans=i;
+                break;
+            }
+            
+            prevSum=prevSum+nums[i];
+            
+        }
+        return ans;
+        
+    }
+};
