@@ -1,0 +1,25 @@
+class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        int count=-1;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]==target){
+                count =i;
+            }
+    
+        }
+        if ( count == -1){
+            for(int i=0;i<nums.size();i++){
+                 if(nums[i]>target ){
+                     count=i;
+                     return count;
+                 }
+               else
+                   count=nums.size();
+            }
+
+        }
+        return count;
+        
+    }
+};
