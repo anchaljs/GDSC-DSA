@@ -1,0 +1,9 @@
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+        string ros=s.substr(1);
+        reverseString(ros);
+        cout<<s[0];
+       
+    }
+};
